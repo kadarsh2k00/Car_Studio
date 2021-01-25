@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '9gs)3*15)l#wsa6v1guz6c@v$5iysym0cgmibnyhv-rk0s1+ly'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1','car-studio.herokuapp.com']
 
 LOGIN_REDIRECT_URL = 'dashboard'
 
@@ -33,6 +33,7 @@ LOGIN_REDIRECT_URL = 'dashboard'
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic'
     'cars.apps.CarsConfig',
     'pages.apps.PagesConfig',
     'accounts.apps.AccountsConfig',
@@ -160,7 +161,7 @@ SITE_ID = 1
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'telegrama43@gmail.com'
-EMAIL_HOST_PASSWORD = ''
+EMAIL_HOST_PASSWORD = 'carzone2021'
 EMAIL_USE_TLS = True
 
 
