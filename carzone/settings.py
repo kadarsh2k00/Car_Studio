@@ -94,9 +94,9 @@ WSGI_APPLICATION = 'carzone.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'da4vtaapfdeaei',
-        'USER': 'gkdjctnfbmtgqs',
-        'PASSWORD': '0fa8f04d6f6eeee3befaf2d5fea4a78c48b38070fdcd8db9ab6839c60b115318',
+        'NAME': '#',
+        'USER': '#',
+        'PASSWORD': '#',
         'HOST': 'ec2-18-205-122-145.compute-1.amazonaws.com',
         'PORT': '5432',
     }
@@ -161,8 +161,8 @@ SITE_ID = 1
 # Email sending
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'telegrama43@gmail.com'
-EMAIL_HOST_PASSWORD = 'carzone2021'
+EMAIL_HOST_USER = '#'
+EMAIL_HOST_PASSWORD = '#'
 EMAIL_USE_TLS = True
 
 
