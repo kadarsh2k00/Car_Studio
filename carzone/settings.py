@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '9gs)3*15)l#wsa6v1guz6c@v$5iysym0cgmibnyhv-rk0s1+ly'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1','car-studio.herokuapp.com']
 
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
     'ckeditor',
     'django.contrib.humanize',
@@ -53,7 +54,10 @@ INSTALLED_APPS = [
     # Providers
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.google',
+    #cloudinary_database
+    'cloudinary',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -168,3 +172,11 @@ EMAIL_USE_TLS = True
 
 # Whitenoise settings
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+#heroku storage
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'hstzget2h',
+    'API_KEY': '744418234644856',
+    'API_SECRET': 'AmhnPRjNQaPKrx6ptbvqUS7g4gk',
+}
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
