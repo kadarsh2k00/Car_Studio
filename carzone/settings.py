@@ -91,6 +91,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'carzone.wsgi.application'
 
+#heroku storage
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'hstzget2h',
+    'API_KEY': '744418234644856',
+    'API_SECRET': 'AmhnPRjNQaPKrx6ptbvqUS7g4gk',
+}
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
@@ -173,10 +180,3 @@ EMAIL_USE_TLS = True
 # Whitenoise settings
 #STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-#heroku storage
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'hstzget2h',
-    'API_KEY': '744418234644856',
-    'API_SECRET': 'AmhnPRjNQaPKrx6ptbvqUS7g4gk',
-}
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
